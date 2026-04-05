@@ -1,0 +1,541 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="mykb_modern.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="My-Kitchen-And-Bath" />
+<meta name="description" content="My-Kitchen-And-Bath" />
+<meta name="author" content="CTU" />
+<meta name="viewport" content=" width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Kitchen & Bathroom Contractor | Herndon,VA | Vienna,VA | My Kitchen and Bath</title>
+<link rel="shortcut icon" href="assetes/favicon.png" />
+<link rel="stylesheet" type="text/css" href="assetes/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="assetes/css/animate.css"/>
+<link rel="stylesheet" type="text/css" href="assetes/fonts/flaticon_mycollection.css"/>
+<link rel="stylesheet" type="text/css" href="assetes/css/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="assetes/css/themify-icons.css"/>
+<link rel="stylesheet" type="text/css" href="assetes/css/slick.css">
+<link rel="stylesheet" type="text/css" href="assetes/css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" href="assetes/css/twentytwenty.css"/>
+<link rel="stylesheet" type="text/css" href="assetes/css/shortcodes.css"/>
+<link rel="stylesheet" type="text/css" href="assetes/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="assetes/css/megamenu.css"/>
+<link rel="stylesheet" type="text/css" href="assetes/css/responsive.css"/>
+<link rel="stylesheet" id="Link1" runat="server" href="assetes/revolution/css/rs6.css" />
+
+
+<style>
+@media screen and (max-width: 480px) {
+  .rev-slidebg {
+    width: 100% !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+  }
+}
+</style>
+
+<script>
+    window.addEventListener('scroll', function () {
+        var menu = document.querySelector('.menu');
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition > 0) {
+            menu.classList.add('white-background');
+        } else {
+            menu.classList.remove('white-background');
+        }
+    });
+</script>
+
+
+
+</head>
+<body>
+    <form runat="server">
+        
+<div class="page ttm-bgcolor-grey">
+
+         <!--page start-->
+    <div class="page ttm-bgcolor-grey">
+
+        <!--header start-->
+        <header id="masthead" class="header ttm-header-style-01">
+
+                        <!-- top_bar -->
+            <div class="top_bar ttm-topbar-wrapper ttm-bgcolor-grey clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 d-flex flex-row align-items-center">
+                            <div class="top_bar_contact_item">
+                                <div class="top_bar_icon"><i class="fa fa-envelope-o"></i>
+                                </div>
+                                <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="mailto:info@mykitchenandbath.com"><span>info@mykitchenandbath.com</span></asp:HyperLink>
+                            </div>
+                            <div class="ttm-widget_header d-flex flex-row justify-content-between  top_bar_social ml-auto p-0">
+                                <!-- widget-info -->
+                                <div class="top_bar_contact_item widget_info">
+                                </div>
+                                <div class="top_bar_contact_item">
+                                     <div class="top_bar_icon widget-icon"><i class="fa fa-phone"></i></div>
+                                         <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="tel:7034294323">703-429-4323</asp:HyperLink>
+                                     </div><!-- widget-info end -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- top_bar end-->
+
+
+
+
+
+            <!-- site-header-menu -->
+            <div id="site-header-menu" class="site-header-menu">
+                <div class="site-header-menu-inner ttm-stickable-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!--site-navigation -->
+                                <div class="site-navigation d-flex flex-row align-items-center justify-content-between">
+                                    <!-- site-branding -->
+                                    <div class="site-branding ">
+                                        <a class="home-link" href="default.aspx" title="Inoterior" rel="home">
+                                            <img id="logo-img" width="167" height="53" class="img-fluid" src="../Site/YENI LOGO EKLENECEK.png" alt="logo-img">
+                                        </a>
+                                    </div><!-- site-branding end -->
+                                    <div class="d-flex flex-row">
+                                        <div class="btn-show-menu-mobile menubar menubar--squeeze">
+                                            <span class="menubar-box">
+                                                <span class="menubar-inner"></span>
+                                            </span>
+                                        </div>
+<!-- menu -->
+<nav class="main-menu menu-mobile">
+  <ul class="menu">
+    <li class="mega-menu-item <%= Request.Url.AbsolutePath.ToLower().EndsWith("") ? "active" : "" %>">
+      <a href="~/default.aspx" runat="server">Home</a>
+    </li>
+
+
+         
+      <li class="mega-menu-item <%= Request.Url.AbsolutePath.ToLower().Contains("services") ? "active" : "" %>">
+      <a href="services-kitchen-remodeling.aspx" class="mega-menu-link" runat="server">Services</a>
+      <ul class="mega-submenu">
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("services-kitchen-remodeling") ? "active" : "" %>"><a href="services-kitchen-remodeling.aspx">Kitchen Remodeling</a></li>
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("services-bathroom-remodeling") ? "active" : "" %>"><a href="services-bathroom-remodeling.aspx">Bathroom Remodeling</a></li>
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("services-basement-remodeling") ? "active" : "" %>"><a href="services-basement-remodeling.aspx">Basement Remodeling</a></li>
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("services-custom-closets") ? "active" : "" %>"><a href="services-custom-closets.aspx">Custom Closet</a></li>
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("services-flooring") ? "active" : "" %>"><a href="services-flooring.aspx">Flooring</a></li>
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("services-blinds-shades") ? "active" : "" %>"><a href="services-blinds-shades.aspx">Blinds & Shades</a></li>
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("services-outdoor-kitchen") ? "active" : "" %>"><a href="services-outdoor-kitchen.aspx">Outdoor Kitchen</a></li>
+      </ul>
+    </li>
+
+    <li class="mega-menu-item <%= Request.Url.AbsolutePath.ToLower().Contains("products") ? "active" : "" %>">
+      <a href="products-cabinets.aspx" class="mega-menu-link" runat="server">Products</a>
+      <ul class="mega-submenu <%= Request.Url.AbsolutePath.ToLower().Contains("products") ? "active" : "" %>">
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("products-cabinets") ? "active" : "" %>"><a href="products-cabinets.aspx">Cabinets</a></li>
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("products-countertops") ? "active" : "" %>"><a href="products-countertops.aspx">Countertops</a></li>
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("products-tiles") ? "active" : "" %>"><a href="products-tiles.aspx">Tiles</a></li>
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("products-decorative-hardware") ? "active" : "" %>"><a href="products-decorative-hardware.aspx">Decorative Hardware</a></li>
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("products-flooring") ? "active" : "" %>"><a href="products-flooring.aspx">Flooring</a></li>
+        <li class="<%= Request.Url.AbsolutePath.ToLower().EndsWith("products-fixtures") ? "active" : "" %>"><a href="products-fixtures.aspx">Fixtures</a></li>
+      </ul>
+    </li>
+
+
+
+    <li class="mega-menu-item <%= Request.Url.AbsolutePath.ToLower().EndsWith("projects") ? "active" : "" %>">
+      <a href="~/projects.aspx" runat="server">Projects</a>
+    </li>
+
+    <li class="mega-menu-item <%= Request.Url.AbsolutePath.ToLower().EndsWith("about") ? "active" : "" %>">
+      <a href="~/about.aspx" runat="server">About Us</a>
+    </li>
+
+
+<li class="mega-menu-item <%= Request.Url.AbsolutePath.ToLower().EndsWith("contact") ? "active" : "" %>">
+  <a href="~/contact.aspx" runat="server" class='<%= Request.Url.AbsolutePath.ToLower().EndsWith("/contact") ? "active" : "" %>'>Contact Us</a>
+</li>
+
+
+
+
+
+  </ul>
+</nav><!-- menu end -->
+
+
+
+
+
+
+                                        <div class="header_extra d-flex flex-row align-items-center justify-content-end">
+                                            <div class="header_btn">
+                                                <a class="ttm-btn ttm-btn-size-md btn-inline ttm-icon-btn-right ttm-btn-color-skincolor" href="https://mykb.typeform.com/to/JmCY9mky">Get A Quote!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- site-navigation end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- site-header-menu end-->
+        </header><!--header end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+        <!--footer start-->
+    <footer class="footer ttm-bg ttm-bgcolor-darkgrey widget-footer clearfix">
+        <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <div class="first-footer">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 widget-area">
+                        <h3><asp:Literal ID="Literal1" runat="server" Text='<%# Eval("footer_coupon_title") %>'></asp:Literal></h3>
+                        <p><asp:Literal ID="Literal2" runat="server" Text='<%# Eval("footer_coupon_desc") %>'></asp:Literal></p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 widget-area">
+                        <div class="newsletter-form">
+        <div class="mailchimp-inputbox clearfix" >
+               <%-- <input type="email" name="email" placeholder="Enter Your Email" required="">--%>
+             <asp:TextBox ID="TextBox1" runat="server" placeholder="Enter Your Email" Width="50%" Height="50%" style="background: transparent; border: 1px solid rgba(255, 255, 255, 0.1);"></asp:TextBox>
+            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CssClass="submit ttm-btn ttm-btn-size-md ttm-btn-shape-squar ttm-btn-style-fill ttm-btn-color-skincolor">Subscribe Now</asp:LinkButton>
+        </div>
+                           <%-- <div id="subscribe-msg"></div>--%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="second-footer">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 widget-area">
+                        <div class="widget widget_text clearfix">
+                            <div class="footer-logo">
+                                <img width="205" height="65" id="footer-logo-img" class="img-fluid" src="assetes/mykblogo.png" alt="image">
+                            </div>
+                            <div class="textwidget widget-text">
+                                <p><asp:Literal ID="Literal3" runat="server" Text='<%# Eval("logo_desc") %>'></asp:Literal></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 widget-area">
+
+                        <div class="widget widget_nav_menu clearfix">
+                           <h3 class="widget-title">Quick Links</h3>
+                            <ul id="menu-footer-service-link" class="menu">
+                                <li><a href="default.aspx">Home</a></li>
+                                <li><a href="projects.aspx">Projects</a></li>
+                                <li><a href="about.aspx">About Us</a></li>
+                                <li><a href="contact.aspx">Contact Us</a></li>
+                                <li><a href="FAQ.aspx">FAQ</a></li>
+                                <li><a href="privacy-policy.aspx">Privacy Policy</a></li>
+                                <li><a href="blogs.aspx">Blogs</a></li>
+                                <li><a href="career.aspx">Career</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 widget-area">
+
+                        <div class="widget widget-timing clearfix">
+                            <h3 class="widget-title"><asp:Literal ID="Literal4" runat="server" Text='<%# Eval("showroom1_title") %>'></asp:Literal></h3>
+                            <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
+                                <div class="featured-icon">
+                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
+                                        <i class="flaticon-call"></i>
+                                    </div>
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>Phone Number</h3>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="tel:7035370857" Text='<%# Eval("showroom1_phone") %>' CssClass="ttm-textcolor-white"></asp:HyperLink>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
+                                <div class="featured-icon">
+                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
+                                        <i class="flaticon-email"></i>
+                                    </div>
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>Email Address</h3>
+                                    </div>
+                                    <div class="featured-desc">
+                                   <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="mailto:vienna@mykitchenandbath.com" Text='<%# Eval("showroom1_mail") %>' CssClass="ttm-textcolor-white"></asp:HyperLink>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
+                                <div class="featured-icon">
+                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
+                                        <i class="flaticon-location"></i>
+                                    </div>
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>Location</h3>
+                                    </div>
+                                    <div class="featured-desc">
+                                     <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="https://goo.gl/maps/Yp8bBD3a8PfJg46H6" Text='<%# Eval("showroom1_location") %>' CssClass="ttm-textcolor-white"></asp:HyperLink>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 widget-area">
+
+                        <div class="widget widget-timing clearfix">
+                            <h3 class="widget-title"><asp:Literal ID="Literal8" runat="server" Text='<%# Eval("showroom2_title") %>'></asp:Literal></h3>
+                            <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
+                                <div class="featured-icon">
+                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
+                                        <i class="flaticon-call"></i>
+                                    </div>
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>Phone Number</h3>
+                                    </div>
+                                    <div class="featured-desc">
+                                         <asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="tel:7034294323" Text='<%# Eval("showroom2_phone") %>' CssClass="ttm-textcolor-white"></asp:HyperLink>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
+                                <div class="featured-icon">
+                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
+                                        <i class="flaticon-email"></i>
+                                    </div>
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>Email Address</h3>
+                                    </div>
+                                    <div class="featured-title">
+                                         <asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="mailto:info@mykitchenandbath.com" Text='<%# Eval("showroom2_mail") %>' CssClass="ttm-textcolor-white"></asp:HyperLink>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="featured-icon-box icon-align-before-content icon-ver_align-top style1">
+                                <div class="featured-icon">
+                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
+                                        <i class="flaticon-location"></i>
+                                    </div>
+                                </div>
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3>Location</h3>
+                                    </div>
+                                    <div class="featured-title">
+                                         <asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="https://goo.gl/maps/ampNc5nhUuQaEqwZ9" Text='<%# Eval("showroom2_location") %>' CssClass="ttm-textcolor-white"></asp:HyperLink>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="bottom-footer-text">
+                <div class="row copyright">
+                    <div class="col-lg-7 col-md-8">
+                        <p class="mb-0 res-991-pb-15">My Kitchen and Bath © 2023  All rights reserved. Created by <a href="#">CTU </a> Consulting LLC</p>
+                    </div>
+                    <div class="col-lg-5 col-md-4">
+                        <div class="social-icons d-flex align-items-center justify-content-end">
+                            <ul class="list-inline">
+                               <li> <asp:HyperLink ID="HyperLink1" runat="server" CssClass="fa fa-facebook" Target="_blank" NavigateUrl='<%# Eval("social_facebook") %>'></asp:HyperLink></li>
+                               <li> <asp:HyperLink ID="HyperLink2" runat="server" CssClass="fa fa-instagram" Target="_blank" NavigateUrl='<%# Eval("social_instagram") %>'  ></asp:HyperLink></li>
+                               <li> <asp:HyperLink ID="HyperLink3" runat="server" CssClass="fa fa-pinterest" Target="_blank" NavigateUrl='<%# Eval("social_pinterest") %>'></asp:HyperLink></li>
+                               <li> <asp:HyperLink ID="HyperLink4" runat="server" CssClass="fa fa-twitter" Target="_blank" NavigateUrl='<%# Eval("social_twitter") %>'></asp:HyperLink></li>
+                               <li> <asp:HyperLink ID="HyperLink5" runat="server" CssClass="fa fa-linkedin" Target="_blank" NavigateUrl='<%# Eval("social_linkedin") %>'></asp:HyperLink></li>
+                               <li> <asp:HyperLink ID="HyperLink7" runat="server" CssClass="fa fa-youtube" Target="_blank" NavigateUrl='<%# Eval("social_youtube") %>'></asp:HyperLink></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </footer>
+    <!--footer end-->
+
+    <!--back-to-top start-->
+    <a id="totop" href="#top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!--back-to-top end-->
+
+
+        </div>
+
+</div><!-- page end -->
+
+    </form>
+
+
+    
+    <!-- Javascript -->
+
+    <script src="assetes/js/jquery.min.js"></script>
+    <script src="assetes/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="assetes/js/tether.min.js"></script>
+    <script src="assetes/js/bootstrap.min.js"></script> 
+    <script src="assetes/js/jquery.easing.js"></script>    
+    <script src="assetes/js/jquery-waypoints.js"></script>    
+    <script src="assetes/js/jquery-validate.js"></script> 
+    <script src="assetes/js/jquery.prettyPhoto.js"></script>
+    <script src="assetes/js/slick.min.js"></script>
+    <script src="assetes/js/numinate.min.js"></script>
+    <script src="assetes/js/imagesloaded.min.js"></script>
+    <script src="assetes/js/jquery-isotope.js"></script>
+    <script src="assetes/js/jquery.event.move.js"></script>
+    <script src="assetes/js/jquery.twentytwenty.js"></script>
+    <script src="assetes/js/circle-progress.min.js"></script>
+    <script src="assetes/js/main.js"></script>
+
+    <!-- Revolution Slider -->
+    <script src="assetes/revolution/js/slider.js"></script>
+    <script  src='assetes/revolution/js/revolution.tools.min.js'></script>
+    <script  src='assetes/revolution/js/rs6.min.js'></script>
+    <!-- Javascript end-->
+
+
+<script>
+    // Read More and Read Less functionality for "content"
+    document.getElementById('read-more').addEventListener('click', function () {
+        var content = document.getElementById('content');
+        content.classList.remove('overflow-hidden');
+        document.getElementById('read-more').style.display = 'none';
+        document.getElementById('read-less').style.display = 'inline-block';
+    });
+
+    document.getElementById('read-less').addEventListener('click', function () {
+        var content = document.getElementById('content');
+        content.classList.add('overflow-hidden');
+        document.getElementById('read-more').style.display = 'inline-block';
+        document.getElementById('read-less').style.display = 'none';
+    });
+
+    // Read More and Read Less functionality for "content1"
+    document.getElementById('read-more1').addEventListener('click', function () {
+        var content1 = document.getElementById('content1');
+        content1.classList.remove('overflow-hidden');
+        document.getElementById('read-more1').style.display = 'none';
+        document.getElementById('read-less1').style.display = 'inline-block';
+    });
+
+    document.getElementById('read-less1').addEventListener('click', function () {
+        var content1 = document.getElementById('content1');
+        content1.classList.add('overflow-hidden');
+        document.getElementById('read-more1').style.display = 'inline-block';
+        document.getElementById('read-less1').style.display = 'none';
+    });
+
+    // Read More and Read Less functionality for "content2"
+    document.getElementById('read-more2').addEventListener('click', function () {
+        var content2 = document.getElementById('content2');
+        content2.classList.remove('overflow-hidden');
+        document.getElementById('read-more2').style.display = 'none';
+        document.getElementById('read-less2').style.display = 'inline-block';
+    });
+
+    document.getElementById('read-less2').addEventListener('click', function () {
+        var content2 = document.getElementById('content2');
+        content2.classList.add('overflow-hidden');
+        document.getElementById('read-more2').style.display = 'inline-block';
+        document.getElementById('read-less2').style.display = 'none';
+    });
+
+    // Read More and Read Less functionality for "content3"
+    document.getElementById('read-more3').addEventListener('click', function () {
+        var content3 = document.getElementById('content3');
+        content3.classList.remove('overflow-hidden');
+        document.getElementById('read-more3').style.display = 'none';
+        document.getElementById('read-less3').style.display = 'inline-block';
+    });
+
+    document.getElementById('read-less3').addEventListener('click', function () {
+        var content3 = document.getElementById('content3');
+        content3.classList.add('overflow-hidden');
+        document.getElementById('read-more3').style.display = 'inline-block';
+        document.getElementById('read-less3').style.display = 'none';
+    });
+</script>
+
+
+
+<!--Start of Chat Script-->
+<script type="text/javascript" src="//cdn.rlets.com/capture_configs/b08/655/c6b/d764299bc91937169052a92.js" async="async"></script>
+<!--End of Chat Script-->
+
+
+
+
+</body>
+</html>
